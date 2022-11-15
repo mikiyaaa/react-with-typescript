@@ -1,10 +1,10 @@
 import React from 'react';
 
 
-function App() {
+const App: React.FunctionComponent = () => {
   return (
     <div className="App">
-
+      React × TypeScript
     </div>
   );
 }
