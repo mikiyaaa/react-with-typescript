@@ -1,6 +1,7 @@
 import React from 'react'
 import { NumberLiteralType } from 'typescript'
 
+// propsの型定義
 interface TodoListProps {
   todos: { 
     id: number, 
@@ -9,8 +10,6 @@ interface TodoListProps {
 }
 
 const TodoList: React.FC<TodoListProps> = (props) => {
-
-
 
   return (
     <ul>

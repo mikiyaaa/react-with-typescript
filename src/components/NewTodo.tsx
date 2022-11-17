@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 
+// propsの型定義
 type NewTodoProps = {
   onAddTodo: (todoText: string) => void;
 }
@@ -22,7 +23,7 @@ const NewTodo: React.FC<NewTodoProps> = (props) => {
         <input 
           type='text' 
           id='todo-text'
-          ref={textInputRef}
+          ref={textInputRef} // useRefで参照できる
         ></input>
       </div>
       <button type='submit'>Create Todo!</button>
