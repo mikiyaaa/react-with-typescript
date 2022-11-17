@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import './NewTodo.css';
 
 // propsの型定義
 type NewTodoProps = {
@@ -17,7 +18,7 @@ const NewTodo: React.FC<NewTodoProps> = (props) => {
 
   return (
     <form onSubmit={submitFormHandler}>
-      <div>
+      <div className='form-control'>
         <label htmlFor='todo-text'>Todo Summary</label>
         <br />
         <input 

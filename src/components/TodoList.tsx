@@ -1,5 +1,5 @@
 import React from 'react'
-import { NumberLiteralType } from 'typescript'
+import './TodoList.css';
 
 // propsの型定義
 interface TodoListProps {
