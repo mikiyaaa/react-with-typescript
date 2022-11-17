@@ -5,8 +5,9 @@ import { NumberLiteralType } from 'typescript'
 interface TodoListProps {
   todos: { 
     id: number, 
-    text: string 
-  }[]
+    text: string,
+  }[],
+  onDeleteTodo: (id: number) => void;
 }
 
 const TodoList: React.FC<TodoListProps> = (props) => {
@@ -15,7 +16,10 @@ const TodoList: React.FC<TodoListProps> = (props) => {
     <ul>
         {props.todos.map((todo, index) => {
             return (
-                <li key={index}>{todo.id}: {todo.text}</li>
+                <li key={index}>
+                  <span>{todo.text}</span>
+                  <button onClick={props.onDeleteTodo.bind(null, todo.id)}>delete</button>  
+                </li>
             )
         })}
     </ul>
